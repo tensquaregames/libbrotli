@@ -1,5 +1,5 @@
-libbrotli (0~git20160815.ccb89e1-1) unstable; urgency=medium
+libbrotli (1.0~git20160815.ccb89e1-1) unstable; urgency=medium
 
   * Initial release
 
- -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 17 Aug 2016 17:06:27 +0200
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 18 Aug 2016 15:06:11 +0200
