@@ -1,0 +1,4 @@
+usr/include/*
+usr/lib/*/libbrotli*.a
+usr/lib/*/libbrotli*.so
+usr/lib/*/pkgconfig/libbrotli*.pc

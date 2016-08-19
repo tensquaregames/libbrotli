@@ -2,3 +2,7 @@
 
 %:
 	dh $@ --with autoreconf
+
+override_dh_strip:
+	dh_strip -plibbrotlidec1 --dbg-package=libbrotlidec1-dbg
+	dh_strip -plibbrotlienc1 --dbg-package=libbrotlienc1-dbg

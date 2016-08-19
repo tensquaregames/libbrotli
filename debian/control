@@ -5,8 +5,10 @@ Maintainer: Janusz Dziemidowicz <rraptorr@nails.eu.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf
 Standards-Version: 3.9.8
 
-Package: libbrotli
+Package: libbrotlidec1
 Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: lossless compression algorithm and format (library)
  Brotli is a generic-purpose lossless compression algorithm that
@@ -15,3 +17,69 @@ Description: lossless compression algorithm and format (library)
  a compression ratio comparable to the best currently available
  general-purpose compression methods. It is similar in speed with
  deflate but offers more dense compression.
+ .
+ This package ships decoder library.
+
+Package: libbrotlidec1-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libbrotlidec1 (= ${binary:Version}), ${misc:Depends}
+Description: lossless compression algorithm and format (library)
+ Brotli is a generic-purpose lossless compression algorithm that
+ compresses data using a combination of a modern variant of the LZ77
+ algorithm, Huffman coding and 2nd order context modeling, with
+ a compression ratio comparable to the best currently available
+ general-purpose compression methods. It is similar in speed with
+ deflate but offers more dense compression.
+ .
+ This package ships decoder library debug symbols.
+
+Package: libbrotlienc1
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: lossless compression algorithm and format (library)
+ Brotli is a generic-purpose lossless compression algorithm that
+ compresses data using a combination of a modern variant of the LZ77
+ algorithm, Huffman coding and 2nd order context modeling, with
+ a compression ratio comparable to the best currently available
+ general-purpose compression methods. It is similar in speed with
+ deflate but offers more dense compression.
+ .
+ This package ships encoder library.
+
+Package: libbrotlienc1-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: libbrotlienc1 (= ${binary:Version}), ${misc:Depends}
+Description: lossless compression algorithm and format (library)
+ Brotli is a generic-purpose lossless compression algorithm that
+ compresses data using a combination of a modern variant of the LZ77
+ algorithm, Huffman coding and 2nd order context modeling, with
+ a compression ratio comparable to the best currently available
+ general-purpose compression methods. It is similar in speed with
+ deflate but offers more dense compression.
+ .
+ This package ships encoder library debug symbols.
+
+Package: libbrotli-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libbrotlidec1 (= ${binary:Version}), libbrotlienc1 (= ${binary:Version}), ${misc:Depends}
+Description: lossless compression algorithm and format (library)
+ Brotli is a generic-purpose lossless compression algorithm that
+ compresses data using a combination of a modern variant of the LZ77
+ algorithm, Huffman coding and 2nd order context modeling, with
+ a compression ratio comparable to the best currently available
+ general-purpose compression methods. It is similar in speed with
+ deflate but offers more dense compression.
+ .
+ This package ships the development files.
